@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Unit 2 Segment 4</title>
+    <!--Import Google Icon Font-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel='stylesheet' type='text/css' media='screen' href='segment4.css'>
+    <link rel="icon" href="fblogo.png">
+</head>
+
+<body>
+    <div class='containter'>
+        <center>
+            <h2>Search Bar Example</h2>
+            <p id='list'>List of Names to Try: Zach, Gopinath, Paul, Miskew</p>
+            <center>
+               <input type='text' placeholder='Type Here' id='searchbar'/>
+            </center>
+               <a class="waves-effect waves-light btn" onclick='submit()' style='background-color:#ff5555;margin-top:5px;'>Search</a>
+               <h2 id='output'></h2>
+        </center>
+    </div>
+
+
+    <script>
+        var searchbar = document.getElementById('searchbar');
+        var output = document.getElementById('output');
+        submit = ()=>{
+            let list = ['Zach', 'Gopinath', 'Paul', 'Miskew']
+            console.log(list);
+            for(let i = 0; i < list.length; i++){
+                if(list[i] === searchbar.value){
+                    output.innerHTML = (list[i] + ' is in the list!')
+                    break
+                }
+                else{
+                    output.innerHTML = (searchbar.value + ' is not in the list!')
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
